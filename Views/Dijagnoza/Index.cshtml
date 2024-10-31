@@ -1,0 +1,44 @@
+@model IEnumerable<arhitektura_projekat.Models.Dijagnoza>
+
+<div>
+    <div>
+        <div class="container wh-100 mb-4">
+            <h2 class="text my-4">Dijagnoze</h2>
+            @if (User.IsInRole("Admin"))
+            {
+                <div class="text">
+                    <a asp-action="Create" class="btn btn-primary">Dodaj novu dijagnozu</a>
+                </div>
+            }
+            <div class="row pt-5 m-auto">
+                @foreach (var dijagnoza in Model)
+                {
+                    <div class="col-md-6 col-lg-4 pb-4">
+                        <div class="card card-custom bg-white border-white border-0">
+                            <div class="card-custom-img" style="background-image: url(@dijagnoza.Slika);"></div>
+                            <div class="card-body" style="overflow-y: auto">
+                                <h4 class="card-title">@dijagnoza.Naziv</h4>
+                                <p class="card-text">
+                                    <b>Oznaka:</b> @dijagnoza.Oznaka
+                                </p>
+                            </div>
+                            <div class="card-footer mb-4" style="background: inherit; border-color: inherit;">
+                                @if (User.Identity.IsAuthenticated){
+                                <a asp-action="Details" asp-route-id="@dijagnoza.Id" class="btn btn-primary mr-10">Detalji</a>
+                                } else
+                                {
+                                <a href="/" class="btn btn-primary mr-10">Prijavi se za detalje</a>
+                                }
+                                @if (User.IsInRole("Admin"))
+                                {  
+                                <a asp-action="Edit" asp-route-id="@dijagnoza.Id" class="btn btn-primary mr-10">Izmeni</a>
+                                <a asp-action="Delete" asp-route-id="@dijagnoza.Id" class="btn btn-danger mr-10">Obriši</a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

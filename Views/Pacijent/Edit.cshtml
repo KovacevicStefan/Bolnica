@@ -1,0 +1,67 @@
+@model arhitektura_projekat.Models.Pacijent
+
+@{
+    ViewData["Title"] = "Izmeni Pacijenta";
+}
+
+<div>
+    <div>
+        <div class="container my-5" style="display: flex; justify-content: center;">
+            <div class="card shadow-sm border-primary" style="width: 50%;">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="text-center mb-0">Izmeni Pacijenta</h2>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Edit">
+                        <input type="hidden" asp-for="Id" />
+                        <div class="form-group mb-3">
+                            <label asp-for="Ime" class="form-label"><b>Ime</b></label>
+                            <input asp-for="Ime" class="form-control" />
+                            <span asp-validation-for="Ime" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Prezime" class="form-label"><b>Prezime</b></label>
+                            <input asp-for="Prezime" class="form-control" />
+                            <span asp-validation-for="Prezime" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Zdr_osiguranje" class="form-label"><b>Zdravstveno osiguranje</b> &nbsp;</label>
+                            <input asp-for="Zdr_osiguranje" class="form-check-input" type="checkbox" />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="DatumRodjenja" class="form-label"><b>Datum rođenja</b></label>
+                            <input asp-for="DatumRodjenja" class="form-control" type="date" />
+                            <span asp-validation-for="DatumRodjenja" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Slika" class="form-label"><b>Slika</b></label>
+                            <input asp-for="Slika" class="form-control" />
+                            <span asp-validation-for="Slika" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="OdeljenjeId" class="form-label"><b>Odeljenje</b></label>
+                            <select asp-for="OdeljenjeId" class="form-control" asp-items="ViewBag.Odeljenja"></select>
+                            <span asp-validation-for="OdeljenjeId" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="DijagnozaId" class="form-label"><b>Dijagnoza</b></label>
+                            <select asp-for="DijagnozaId" class="form-control" asp-items="ViewBag.Dijagnoze"></select>
+                            <span asp-validation-for="DijagnozaId" class="text-danger"></span>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary mx-2">Sačuvaj</button>
+                            <a asp-action="Index" class="btn btn-secondary mx-2">Odustani</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

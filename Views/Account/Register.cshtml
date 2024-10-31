@@ -1,0 +1,48 @@
+@model arhitektura_projekat.Models.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Registracija";
+}
+
+<div class="background-image">
+    <div class="page">
+        <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+            <div class="row align-items-center g-lg-5 py-5">
+                <div class="col-lg-7 text-center text-lg-start">
+                    <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Registruj se</h1>
+                    <p class="col-lg-10 fs-4">Uključite se u naš sistem i postanite deo našeg zdravstvenog tima.</p>
+                </div>
+                <div class="col-md-10 mx-auto col-lg-5">
+                    <form asp-action="Register" method="post" class="p-4 p-md-5 border rounded-3 bg-body-tertiary form-background">
+                        <h2 class="p-2 mb-3">Registracija</h2>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" asp-for="FirstName" class="form-control" id="floatingFirstName" placeholder="Ime" required>
+                            <label for="floatingFirstName">Ime</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" asp-for="LastName" class="form-control" id="floatingLastName" placeholder="Prezime" required>
+                            <label for="floatingLastName">Prezime</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" asp-for="Email" class="form-control" id="floatingEmail" placeholder="name@example.com" required>
+                            <label for="floatingEmail">Email adresa</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" asp-for="Password" class="form-control" id="floatingPassword" placeholder="Password" required>
+                            <label for="floatingPassword">Lozinka</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" asp-for="ConfirmPassword" class="form-control" id="floatingConfirmPassword" placeholder="Potvrdi lozinku" required>
+                            <label for="floatingConfirmPassword">Potvrdi lozinku</label>
+                        </div>
+
+                        <button class="w-100 btn btn-lg btn-primary" type="submit">Registruj se</button>
+                        <hr class="my-4">
+                        <small class="text-body-secondary">Već imaš nalog? <a href="/">Prijavi se</a>.</small>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,131 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = arhitektura_projekat
+build_property.RootNamespace = arhitektura_projekat
+build_property.ProjectDir = /home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat
+build_property._RazorSourceGeneratorDebug = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Bolnica/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9sbmljYS9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Bolnica/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9sbmljYS9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Bolnica/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9sbmljYS9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Bolnica/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9sbmljYS9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Bolnica/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9sbmljYS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Dijagnoza/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlqYWdub3phL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Dijagnoza/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlqYWdub3phL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Dijagnoza/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlqYWdub3phL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Dijagnoza/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlqYWdub3phL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Dijagnoza/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGlqYWdub3phL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Odeljenje/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT2RlbGplbmplL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Odeljenje/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT2RlbGplbmplL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Odeljenje/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT2RlbGplbmplL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Odeljenje/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT2RlbGplbmplL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Odeljenje/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT2RlbGplbmplL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Pacijent/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFjaWplbnQvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Pacijent/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFjaWplbnQvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Pacijent/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFjaWplbnQvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Pacijent/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFjaWplbnQvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Pacijent/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFjaWplbnQvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ndfizwuyzh

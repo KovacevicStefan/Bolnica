@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Marko Kalanj</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/shared.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/register-login.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/arhitektura_projekat.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="header">
+    <div class="content">
+        <span class="logo"><a href="/">Bolinca</a></span>
+        <ul>
+            <li><a href="/Bolnica">Bolnice</a></li>
+            <li><a href="/Dijagnoza">Dijagnoze</a></li>
+            <li><a href="/Odeljenje">Odeljenje</a></li>
+            @if (User.IsInRole("Admin"))
+            {
+            <li><a href="/Pacijent">Pacijenti</a></li>
+            }
+        </ul>
+    </div>
+</div>
+    </header>
+    
+        <main role="main">
+            @RenderBody()
+        </main>
+
+    <footer class="black">
+        <div class="container center">
+            <div class="white">
+                &copy; 2024 - Marko Kalanj
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,57 @@
+@model arhitektura_projekat.Models.Bolnica
+
+@{
+    ViewData["Title"] = "Izmeni Bolnicu";
+}
+
+<div class="wh-100">
+    <div class="center wh-100">
+        <div class="container my-5" style="display: flex; justify-content: center;">
+            <div class="card shadow-sm border-primary" style="width: 50%;">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="text-center mb-0">Izmeni Bolnicu</h2>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Edit">
+                        <input type="hidden" asp-for="Id" />
+                        
+                        <div class="form-group mb-3">
+                            <label asp-for="Naziv" class="form-label"><b>Naziv bolnice</b></label>
+                            <input asp-for="Naziv" class="form-control" />
+                            <span asp-validation-for="Naziv" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Adresa" class="form-label"><b>Adresa</b></label>
+                            <input asp-for="Adresa" class="form-control" />
+                            <span asp-validation-for="Adresa" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Budzet" class="form-label"><b>Budžet</b></label>
+                            <input asp-for="Budzet" class="form-control" />
+                            <span asp-validation-for="Budzet" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="BrojTelefona" class="form-label"><b>Broj telefona</b></label>
+                            <input asp-for="BrojTelefona" class="form-control" />
+                            <span asp-validation-for="BrojTelefona" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Slika" class="form-label"><b>Slika</b></label>
+                            <input asp-for="Slika" class="form-control" />
+                            <span asp-validation-for="Slika" class="text-danger"></span>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary mx-2">Sačuvaj</button>
+                            <a asp-action="Index" class="btn btn-secondary mx-2">Odustani</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

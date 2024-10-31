@@ -1,0 +1,8 @@
+.form-background {
+    background-color: aliceblue;
+    box-shadow: var(--shadow);
+}
+
+.text-c {
+    text-align: center;
+}

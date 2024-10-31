@@ -1,0 +1,43 @@
+@model IEnumerable<arhitektura_projekat.Models.Pacijent>
+
+<div>
+    <div class="container wh-100 mb-4">
+        <h2 class="text my-4">Pacijenti</h2>
+        @if (User.IsInRole("Admin"))
+        {
+        <div class="text">
+            <a asp-action="Create" class="btn btn-primary">Dodaj novog pacijenta</a>
+        </div>
+        }
+        <div class="row pt-5 m-auto">
+            @foreach (var pacijent in Model)
+                {
+                    <div class="col-md-6 col-lg-4 pb-4">
+                        <div class="card card-custom bg-white border-white border-0">
+                            <div class="card-custom-img" style="background-image: url(@pacijent.Slika);"></div>
+                            <div class="card-body" style="overflow-y: auto">
+                                <h4 class="card-title">@pacijent.Ime @pacijent.Prezime</h4>
+                                <p class="card-text">
+                                    <b>Datum rođenja:</b> @pacijent.DatumRodjenja.ToString("dd.MM.yyyy") <br>
+                                    <b>Osiguranje:</b> @(pacijent.Zdr_osiguranje ? "Da" : "Ne") <br>
+                                    <b>Odeljenje:</b> @pacijent.Odeljenje?.Naziv <br>
+                                    <b>Dijagnoza:</b> @pacijent.Dijagnoza?.Naziv <br>
+                                </p>
+                            </div>
+                            <div class="card-footer mb-4" style="background: inherit; border-color: inherit;">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                <a asp-action="Details" asp-route-id="@pacijent.Id" class="btn btn-primary mr-10">Detalji</a>
+                                }
+                                @if (User.IsInRole("Admin"))
+                                {
+                                <a asp-action="Edit" asp-route-id="@pacijent.Id" class="btn btn-primary mr-10">Izmeni</a>
+                                <a asp-action="Delete" asp-route-id="@pacijent.Id" class="btn btn-danger mr-10">Obriši</a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+        </div>
+    </div>
+</div>

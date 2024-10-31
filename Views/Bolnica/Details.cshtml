@@ -1,0 +1,40 @@
+@model arhitektura_projekat.Models.Bolnica
+
+@{
+    ViewData["Title"] = "Detalji o Bolnici";
+}
+
+<div>
+    <div>
+        <div class="container my-5" style="display: flex; justify-content: center;">
+            <div class="card shadow-sm border-info" style="width: 50%;">
+                <div class="card-header bg-info text-white">
+                    <h2 class="text-center mb-0">Detalji o Bolnici</h2>
+                </div>
+                <div class="card-body">
+                    <div class="text-center mb-4">
+                        <img src="@Html.DisplayFor(model => model.Slika)" alt="Slika bolnice" class="img-fluid rounded" style="max-height: 200px;">
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-md-8" style="text-align: center;">
+                            <p>
+                                <b>@Html.DisplayNameFor(model => model.Naziv):</b> &nbsp; @Html.DisplayFor(model => model.Naziv) <br>
+                                <b>@Html.DisplayNameFor(model => model.Adresa):</b> &nbsp; @Html.DisplayFor(model => model.Adresa) <br>
+                                <b>@Html.DisplayNameFor(model => model.Budzet):</b> &nbsp; @Html.DisplayFor(model => model.Budzet) <br>
+                                <b>Broj telefona:</b> &nbsp; @Model.BrojTelefona <br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    @if (User.IsInRole("Admin"))
+                    {
+                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning mx-2">Izmeni</a>
+                    }
+                    <a asp-action="Index" class="btn btn-secondary mx-2">Nazad na listu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+@model arhitektura_projekat.Models.Pacijent
+
+@{
+    ViewData["Title"] = "Detalji o Pacijentu";
+}
+
+<div>
+    <div>
+        <div class="container my-5" style="display: flex; justify-content: center;">
+            <div class="card shadow-sm border-info" style="width: 50%;">
+                <div class="card-header bg-info text-white">
+                    <h2 class="text-center mb-0">Detalji o Pacijentu</h2>
+                </div>
+                <div class="card-body">
+                    <div class="text-center mb-4">
+                        <img src="@Html.DisplayFor(model => model.Slika)" alt="Slika pacijenta" class="img-fluid rounded" style="max-height: 200px;">
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8" style="text-align: center;">
+                            <p>
+                                <b>Ime:</b> &nbsp; @Html.DisplayFor(model => model.Ime) <br>
+                                <b>Prezime:</b> &nbsp; @Html.DisplayFor(model => model.Prezime) <br>
+                                <b>Zdravstveno osiguranje:</b> &nbsp; @Html.DisplayFor(model => model.Zdr_osiguranje) <br>
+                                <b>Datum rođenja:</b> &nbsp; @Html.DisplayFor(model => model.DatumRodjenja) <br>
+                                <b>Odeljenje:</b> &nbsp; @Html.DisplayFor(model => model.Odeljenje.Naziv) <br>
+                                <b>Dijagnoza:</b> &nbsp; @Html.DisplayFor(model => model.Dijagnoza.Naziv)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    @if (User.IsInRole("Admin"))
+                    {
+                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning mx-2">Izmeni</a>
+                    }
+                    <a asp-action="Index" asp-route-id="@Model.OdeljenjeId" class="btn btn-secondary mx-2">Nazad na listu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

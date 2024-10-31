@@ -1,0 +1,54 @@
+@model IEnumerable<arhitektura_projekat.Models.Bolnica>
+
+<div>
+    <div>
+        <div class="container wh-100 mb-4">
+            <h2 class="text my-4">Bolnice</h2>
+
+            @* Prikazuje dugme za kreiranje nove bolnice samo ako je korisnik admin *@
+            @if (User.IsInRole("Admin"))
+            {
+                <div class="text">
+                    <a asp-action="Create" class="btn btn-primary">Dodaj novu bolnicu</a>
+                </div>
+            }
+
+            <div class="row pt-5 m-auto">
+                @foreach (var bolnica in Model)
+                {
+                    <div class="col-md-6 col-lg-4 pb-4">
+                        <div class="card card-custom bg-white border-white border-0">
+                            <div class="card-custom-img" style="background-image: url(@bolnica.Slika);"></div>
+                            <div class="card-body" style="overflow-y: auto">
+                                <h4 class="card-title">@bolnica.Naziv</h4>
+                                <p class="card-text">
+                                    <b>Adresa:</b> @bolnica.Adresa <br>
+                                    <b>Broj telefona:</b> @bolnica.BrojTelefona<br>
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                    <b>Budzet:</b> @bolnica.Budzet.ToString("C")
+                                    }
+                                </p>
+                            </div>
+                            <div class="card-footer mb-4" style="background: inherit; border-color: inherit;">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                <a asp-action="Details" asp-route-id="@bolnica.Id" class="btn btn-primary mr-10">Detalji</a>
+                                } else
+                                {
+                                <a href="/" class="btn btn-primary mr-10">Prijavi se za detalje</a>
+                                }
+                                @* Prikazuje dugmad za izmenu i brisanje samo ako je korisnik admin *@
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <a asp-action="Edit" asp-route-id="@bolnica.Id" class="btn btn-primary mr-10">Izmeni</a>
+                                    <a asp-action="Delete" asp-route-id="@bolnica.Id" class="btn btn-danger mr-10">Obriši</a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

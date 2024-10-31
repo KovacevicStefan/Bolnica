@@ -1,0 +1,37 @@
+@model arhitektura_projekat.Models.Odeljenje
+
+@{
+    ViewData["Title"] = "Obriši Odeljenje";
+}
+
+<div>
+    <div>
+        <div class="container my-5" style="display: flex; justify-content: center;">
+            <div class="card shadow-sm border-danger" style="width: 50%;">
+                <div class="card-header bg-danger text-white">
+                    <h2 class="text-center mb-0">Obriši Odeljenje</h2>
+                </div>
+                <div class="card-body">
+                    <h4 class="text-center text-danger mb-4">Da li ste sigurni da želite da obrišete ovo odeljenje?</h4>
+
+                    <div class="row justify-content-center">
+                        <div class="col-md-8" style="text-align: center;">
+                            <p>
+                                <b>Naziv:</b> &nbsp; @Html.DisplayFor(model => model.Naziv) <br>
+                                <b>Lokacija:</b> &nbsp; @Html.DisplayFor(model => model.Lokacija) <br>
+                                <b>Bolnica:</b> &nbsp; @Html.DisplayFor(model => model.Bolnica.Naziv)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <form asp-action="Delete" method="post" class="d-inline">
+                        <input type="hidden" asp-for="Id" />
+                        <button type="submit" class="btn btn-danger mx-2">Obriši</button>
+                    </form>
+                    <a asp-action="Index" class="btn btn-secondary mx-2">Nazad na listu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

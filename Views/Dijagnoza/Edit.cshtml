@@ -1,0 +1,51 @@
+@model arhitektura_projekat.Models.Dijagnoza
+
+@{
+    ViewData["Title"] = "Izmeni dijagnozu";
+}
+
+<div>
+    <div>
+        <div class="container my-5" style="display: flex; justify-content: center;">
+            <div class="card shadow-sm border-primary" style="width: 50%;">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="text-center mb-0">Izmeni dijagnozu</h2>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Edit">
+                        <input type="hidden" asp-for="Id" />
+                        
+                        <div class="form-group mb-3">
+                            <label asp-for="Naziv" class="form-label"><b>Naziv dijagnoze</b></label>
+                            <input asp-for="Naziv" class="form-control" />
+                            <span asp-validation-for="Naziv" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Opis" class="form-label"><b>Opis</b></label>
+                            <input asp-for="Opis" class="form-control" />
+                            <span asp-validation-for="Opis" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Oznaka" class="form-label"><b>Oznaka</b></label>
+                            <input asp-for="Oznaka" class="form-control" />
+                            <span asp-validation-for="Oznaka" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Slika" class="form-label"><b>Slika</b></label>
+                            <input asp-for="Slika" class="form-control" />
+                            <span asp-validation-for="Slika" class="text-danger"></span>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary mx-2">Sačuvaj</button>
+                            <a asp-action="Index" class="btn btn-secondary mx-2">Odustani</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

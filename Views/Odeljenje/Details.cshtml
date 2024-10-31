@@ -1,0 +1,38 @@
+@model arhitektura_projekat.Models.Odeljenje
+
+@{
+    ViewData["Title"] = "Detalji o Odeljenju";
+}
+
+<div>
+    <div>
+        <div class="container my-5" style="display: flex; justify-content: center;">
+            <div class="card shadow-sm border-info" style="width: 50%;">
+                <div class="card-header bg-info text-white">
+                    <h2 class="text-center mb-0">Detalji o Odeljenju</h2>
+                </div>
+                <div class="card-body">
+                    <div class="text-center mb-4">
+                        <img src="@Html.DisplayFor(model => model.Slika)" alt="Slika odeljenja" class="img-fluid rounded" style="max-height: 200px;">
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8" style="text-align: center;">
+                            <p>
+                                <b>Naziv:</b> &nbsp; @Html.DisplayFor(model => model.Naziv) <br>
+                                <b>Lokacija:</b> &nbsp; @Html.DisplayFor(model => model.Lokacija) <br>
+                                <b>Bolnica:</b> &nbsp; @Html.DisplayFor(model => model.Bolnica.Naziv)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    @if (User.IsInRole("Admin"))
+                    {
+                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning mx-2">Izmeni</a>
+                    }
+                    <a asp-action="Index" class="btn btn-secondary mx-2">Nazad na listu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
