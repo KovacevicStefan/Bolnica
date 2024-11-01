@@ -18,16 +18,14 @@ namespace arhitektura_projekat.Controllers
             _context = context;
         }
 
-        // GET: Dijagnoza
-        [HttpGet] // Oznaci da je ovo GET zahtev
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
             var dijagnoze = await _context.Dijagnoze.ToListAsync();
             return View(dijagnoze);
         }
 
-        // GET: Dijagnoza/Details/5
-        [HttpGet("{id}")] // Oznaci da je ovo GET zahtev sa id parametrom
+        [HttpGet("{id}")]
         public async Task<IActionResult> Details(int id)
         {
             var dijagnoza = await _context.Dijagnoze.FindAsync(id);
@@ -36,16 +34,14 @@ namespace arhitektura_projekat.Controllers
             return View(dijagnoza);
         }
 
-        // GET: Dijagnoza/Create
-        [HttpGet("Create")] // Oznaci da je ovo GET zahtev za kreiranje
+        [HttpGet("Create")]
         [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Dijagnoza/Create
-        [HttpPost("Create")] // Oznaci da je ovo POST zahtev za kreiranje
+        [HttpPost("Create")]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create([Bind("Naziv,Opis,Oznaka,Slika")] Dijagnoza dijagnoza)
@@ -62,8 +58,7 @@ namespace arhitektura_projekat.Controllers
             return View(dijagnoza);
         }
 
-        // GET: Dijagnoza/Edit/5
-        [HttpGet("Edit/{id}")] // Oznaci da je ovo GET zahtev za izmenu sa id parametrom
+        [HttpGet("Edit/{id}")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id)
         {
@@ -73,8 +68,7 @@ namespace arhitektura_projekat.Controllers
             return View(dijagnoza);
         }
 
-        // POST: Dijagnoza/Edit/5
-        [HttpPost("Edit/{id}")] // Oznaci da je ovo POST zahtev za izmenu sa id parametrom
+        [HttpPost("Edit/{id}")]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Naziv,Opis,Oznaka,Slika")] Dijagnoza dijagnoza)
@@ -104,8 +98,7 @@ namespace arhitektura_projekat.Controllers
             return View(dijagnoza);
         }
 
-        // GET: Dijagnoza/Delete/5
-        [HttpGet("Delete/{id}")] // Oznaci da je ovo GET zahtev za brisanje sa id parametrom
+        [HttpGet("Delete/{id}")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int id)
         {
@@ -118,8 +111,7 @@ namespace arhitektura_projekat.Controllers
             return View(dijagnoza);
         }
 
-        // POST: Dijagnoza/Delete/5
-        [HttpPost("Delete/{id}")] // Oznaci da je ovo POST zahtev za potvrdu brisanja sa id parametrom
+        [HttpPost("Delete/{id}")]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteConfirmed(int id)

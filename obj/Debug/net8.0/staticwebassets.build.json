@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZWeUSuwdvsAEEhyQLW3TtdGM3WsObX8TaBanwpjH6fk=",
+  "Hash": "o52EcXL+73jitbs9RB0UY4JNArq2f294w4kbddM9N54=",
   "Source": "arhitektura-projekat",
   "BasePath": "_content/arhitektura-projekat",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/site.css"
+    },
+    {
+      "Identity": "/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/wwwroot/database/data.sql",
+      "SourceId": "arhitektura-projekat",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/wwwroot/",
+      "BasePath": "_content/arhitektura-projekat",
+      "RelativePath": "database/data.sql",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/database/data.sql"
     },
     {
       "Identity": "/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/wwwroot/favicon.ico",

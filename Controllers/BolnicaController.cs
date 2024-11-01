@@ -22,7 +22,6 @@ namespace arhitektura_projekat.Controllers
             _context = context;
         }
 
-        // GET: Bolnica
         [HttpGet]
         public async Task<IActionResult> Index()
         {
@@ -30,7 +29,6 @@ namespace arhitektura_projekat.Controllers
             return View(bolnice);
         }
 
-        // GET: Bolnica/Details/5
         [HttpGet("Details/{id}")]
         public async Task<IActionResult> Details(int id)
         {
@@ -42,7 +40,6 @@ namespace arhitektura_projekat.Controllers
             return View(bolnica);
         }
 
-        // GET: Bolnica/Create
         [HttpGet("Create")]
         [Authorize(Roles = "Admin")]
         public IActionResult Create()
@@ -50,7 +47,6 @@ namespace arhitektura_projekat.Controllers
             return View();
         }
 
-        // POST: Bolnica/Create
         [HttpPost("Create")]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
@@ -68,7 +64,6 @@ namespace arhitektura_projekat.Controllers
             return View(bolnica);
         }
 
-        // GET: Bolnica/Edit/5
         [HttpGet("Edit/{id}")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id)
@@ -81,7 +76,6 @@ namespace arhitektura_projekat.Controllers
             return View(bolnica);
         }
 
-        // POST: Bolnica/Edit/5
         [HttpPost("Edit/{id}")]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
@@ -115,7 +109,6 @@ namespace arhitektura_projekat.Controllers
             return View(bolnica);
         }
 
-        // GET: Bolnica/Delete/5
         [HttpGet("Delete/{id}")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int id)
@@ -128,7 +121,6 @@ namespace arhitektura_projekat.Controllers
             return View(bolnica);
         }
 
-        // POST: Bolnica/Delete/5
         [HttpPost("Delete/{id}")]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]

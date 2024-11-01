@@ -119,3 +119,4 @@
 /home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/obj/Debug/net8.0/arhitektura-projekat.MvcApplicationPartsAssemblyInfo.cs
 /home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/obj/Debug/net8.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
 /home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/obj/Debug/net8.0/scopedcss/projectbundle/arhitektura-projekat.bundle.scp.css
+/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/obj/Debug/net8.0/arhitektura-projekat.sourcelink.json

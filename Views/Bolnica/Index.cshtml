@@ -1,5 +1,9 @@
 @model IEnumerable<arhitektura_projekat.Models.Bolnica>
 
+@{
+    ViewData["Title"] = "Bolnice";
+}
+
 <div>
     <div>
         <div class="container wh-100 mb-4">
@@ -9,7 +13,7 @@
             @if (User.IsInRole("Admin"))
             {
                 <div class="text">
-                    <a asp-action="Create" class="btn btn-primary">Dodaj novu bolnicu</a>
+                    <a asp-action="Create" class="btn btn-success">Dodaj novu bolnicu</a>
                 </div>
             }
 
@@ -41,7 +45,7 @@
                                 @* Prikazuje dugmad za izmenu i brisanje samo ako je korisnik admin *@
                                 @if (User.IsInRole("Admin"))
                                 {
-                                    <a asp-action="Edit" asp-route-id="@bolnica.Id" class="btn btn-primary mr-10">Izmeni</a>
+                                    <a asp-action="Edit" asp-route-id="@bolnica.Id" class="btn btn-secondary mr-10">Izmeni</a>
                                     <a asp-action="Delete" asp-route-id="@bolnica.Id" class="btn btn-danger mr-10">Obriši</a>
                                 }
                             </div>

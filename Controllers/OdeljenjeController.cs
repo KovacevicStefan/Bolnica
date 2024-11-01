@@ -19,7 +19,6 @@ namespace arhitektura_projekat.Controllers
             _context = context;
         }
 
-        // GET: Odeljenje
         [HttpGet]
         [Authorize(Roles = "Admin, User")]
         public async Task<IActionResult> Index()
@@ -30,7 +29,6 @@ namespace arhitektura_projekat.Controllers
             return View(odeljenja);
         }
 
-        // GET: Odeljenje/Details/5
         [HttpGet("Details/{id}")]
         [Authorize(Roles = "Admin, User")]
         public async Task<IActionResult> Details(int id)
@@ -43,12 +41,10 @@ namespace arhitektura_projekat.Controllers
             return View(odeljenje);
         }
 
-        // GET: Odeljenje/Create
         [HttpGet("Create")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create()
         {
-            // Učitavanje svih bolnica iz baze podataka
             ViewBag.Bolnice = await _context.Bolnice.Select(b => new SelectListItem
             {
                 Value = b.Id.ToString(),
@@ -58,7 +54,6 @@ namespace arhitektura_projekat.Controllers
             return View();
         }
 
-        // POST: Odeljenje/Create
         [HttpPost("Create")]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
@@ -77,8 +72,6 @@ namespace arhitektura_projekat.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-
-            // Ponovo učitaj bolnice ako je model nevalidan
             ViewBag.Bolnice = await _context.Bolnice.Select(b => new SelectListItem
             {
                 Value = b.Id.ToString(),
@@ -88,17 +81,13 @@ namespace arhitektura_projekat.Controllers
             return View(odeljenje);
         }
 
-
-        // GET: Odeljenje/Edit/5
         [HttpGet("Edit/{id}")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id)
         {
-            // Preuzimanje odeljenja na osnovu ID-a
             var odeljenje = await _context.Odeljenja.FindAsync(id);
             if (odeljenje == null) return NotFound();
 
-            // Učitavanje svih bolnica iz baze podataka
             ViewBag.Bolnice = await _context.Bolnice.Select(b => new SelectListItem
             {
                 Value = b.Id.ToString(),
@@ -108,7 +97,6 @@ namespace arhitektura_projekat.Controllers
             return View(odeljenje);
         }
 
-        // POST: Odeljenje/Edit/5
         [HttpPost("Edit/{id}")]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
@@ -139,8 +127,6 @@ namespace arhitektura_projekat.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-
-            // Ponovo učitaj bolnice ako model nije validan
             ViewBag.Bolnice = await _context.Bolnice.Select(b => new SelectListItem
             {
                 Value = b.Id.ToString(),
@@ -155,8 +141,6 @@ namespace arhitektura_projekat.Controllers
             return _context.Odeljenja.Any(e => e.Id == id);
         }
 
-
-        // GET: Odeljenje/Delete/5
         [HttpGet("Delete/{id}")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int id)
@@ -168,7 +152,6 @@ namespace arhitektura_projekat.Controllers
             return View(odeljenje);
         }
 
-        // POST: Odeljenje/Delete/5
         [HttpPost("Delete/{id}")]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]

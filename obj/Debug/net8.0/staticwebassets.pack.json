@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
+      "Id": "/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/wwwroot/database/data.sql",
+      "PackagePath": "staticwebassets/database/data.sql"
+    },
+    {
       "Id": "/home/stepex/Desktop/Full-stack project/Marko Kalanj/arhitektura-projekat/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
     },

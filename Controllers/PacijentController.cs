@@ -19,7 +19,6 @@ namespace arhitektura_projekat.Controllers
             _context = context;
         }
 
-        // GET: Pacijent
         [HttpGet]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Index()
@@ -44,7 +43,6 @@ namespace arhitektura_projekat.Controllers
             return View(pacijent);
         }
 
-        // GET: Pacijent/Create
         [HttpGet("Create")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create()
@@ -64,7 +62,6 @@ namespace arhitektura_projekat.Controllers
             return View();
         }
 
-        // POST: Pacijent/Create
         [HttpPost("Create")]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
@@ -96,7 +93,6 @@ namespace arhitektura_projekat.Controllers
             return View(pacijent);
         }
 
-        // GET: Pacijent/Edit/5
         [HttpGet("Edit/{id}")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id)
@@ -119,7 +115,6 @@ namespace arhitektura_projekat.Controllers
             return View(pacijent);
         }
 
-        // POST: Pacijent/Edit/5
         [HttpPost("Edit/{id}")]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
@@ -166,7 +161,6 @@ namespace arhitektura_projekat.Controllers
 
             return View(pacijent);
         }
-
         private bool PacijentExists(int id)
         {
             return _context.Pacijenti.Any(e => e.Id == id);

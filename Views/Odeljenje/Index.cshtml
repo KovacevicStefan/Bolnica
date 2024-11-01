@@ -1,5 +1,9 @@
 @model IEnumerable<arhitektura_projekat.Models.Odeljenje>
 
+@{
+    ViewData["Title"] = "Odeljenja";
+}
+
 <div>
     <div>
         <div class="container wh-100 mb-4">
@@ -7,7 +11,7 @@
             @if (User.IsInRole("Admin"))
             {
                 <div class="text">
-                    <a asp-action="Create" class="btn btn-primary">Dodaj novo odeljenje</a>
+                    <a asp-action="Create" class="btn btn-success">Dodaj novo odeljenje</a>
                 </div>
             }
             <div class="row pt-5 m-auto">
@@ -30,7 +34,7 @@
                                 }
                                 @if (User.IsInRole("Admin"))
                                 {
-                                <a asp-action="Edit" asp-route-id="@odeljenje.Id" class="btn btn-primary mr-10">Izmeni</a>
+                                <a asp-action="Edit" asp-route-id="@odeljenje.Id" class="btn btn-secondary mr-10">Izmeni</a>
                                 <a asp-action="Delete" asp-route-id="@odeljenje.Id" class="btn btn-danger mr-10">Obriši</a>
                                 }
                             </div>

@@ -1,5 +1,9 @@
 @model IEnumerable<arhitektura_projekat.Models.Dijagnoza>
 
+@{
+    ViewData["Title"] = "Dijagnoze";
+}
+
 <div>
     <div>
         <div class="container wh-100 mb-4">
@@ -7,7 +11,7 @@
             @if (User.IsInRole("Admin"))
             {
                 <div class="text">
-                    <a asp-action="Create" class="btn btn-primary">Dodaj novu dijagnozu</a>
+                    <a asp-action="Create" class="btn btn-success">Dodaj novu dijagnozu</a>
                 </div>
             }
             <div class="row pt-5 m-auto">
@@ -31,7 +35,7 @@
                                 }
                                 @if (User.IsInRole("Admin"))
                                 {  
-                                <a asp-action="Edit" asp-route-id="@dijagnoza.Id" class="btn btn-primary mr-10">Izmeni</a>
+                                <a asp-action="Edit" asp-route-id="@dijagnoza.Id" class="btn btn-secondary mr-10">Izmeni</a>
                                 <a asp-action="Delete" asp-route-id="@dijagnoza.Id" class="btn btn-danger mr-10">Obriši</a>
                                 }
                             </div>

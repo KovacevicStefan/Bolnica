@@ -9,21 +9,16 @@ using System.Security.Claims;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAuthorization();
 
-// Ove dve linije su bitne za Identity
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("Database")));
 builder.Services.AddIdentity<User, Role>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
-
-// Ne dodaj AddAuthentication() jer to već radi AddIdentity
-// builder.Services.AddAuthentication().AddCookie(IdentityConstants.ApplicationScheme);
 
 builder.Services.ConfigureApplicationCookie(options =>
 {
@@ -38,7 +33,6 @@ builder.Services.ConfigureApplicationCookie(options =>
         }
     };
 });
-
 
 WebApplication app = builder.Build();
 
@@ -56,19 +50,16 @@ app.MapGet("users/me", async (ClaimsPrincipal claims, ApplicationDbContext conte
     return await context.Users.FindAsync(UserId);
 }).RequireAuthorization();
 
-//app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-// Kreiraj uloge prilikom pokretanja aplikacije
-using (var scope = app.Services.CreateScope()) // Stvaramo novi opseg
+using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
-    await CreateRoles(services); // Koristimo servis iz novog opsega
+    await CreateRoles(services);
 }
 
 app.Run();
 
-// Ova metoda može biti izvan Main metode, ali u istom kontekstu
 static async Task CreateRoles(IServiceProvider serviceProvider)
 {
     var roleManager = serviceProvider.GetRequiredService<RoleManager<Role>>();
@@ -79,7 +70,6 @@ static async Task CreateRoles(IServiceProvider serviceProvider)
         var roleExist = await roleManager.RoleExistsAsync(roleName);
         if (!roleExist)
         {
-            // Kreiraj novu ulogu
             await roleManager.CreateAsync(new Role(roleName));
         }
     }

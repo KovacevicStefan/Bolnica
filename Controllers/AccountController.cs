@@ -37,10 +37,7 @@ public class AccountController : Controller
             var result = await _userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {
-                // Dodeljivanje uloge "User"
                 await _userManager.AddToRoleAsync(user, "User");
-
-                // Preusmeravanje na početnu stranicu
                 return RedirectToAction("Index", "Home");
             }
 
@@ -49,12 +46,9 @@ public class AccountController : Controller
                 ModelState.AddModelError(string.Empty, error.Description);
             }
         }
-
-        // Ako model nije validan, vraćamo se na registracionu stranicu
         return View(model);
     }
 
-    // Opciona metoda za prijavu korisnika
     [HttpGet]
     public IActionResult Login()
     {

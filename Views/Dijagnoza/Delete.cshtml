@@ -13,9 +13,9 @@
                 </div>
                 <div class="card-body">
                     <h4 class="text-danger">Da li ste sigurni da želite da obrišete ovu dijagnozu?</h4>
-                    <h5><b>Naziv:</b> @Model.Naziv</h5>
-                    <p><b>Opis:</b> @Model.Opis</p>
-                    <p><b>Oznaka:</b> @Model.Oznaka</p>
+                    <p><b>Naziv:</b> @Model.Naziv <br>
+                    <b>Opis:</b> @Model.Opis <br>
+                    <b>Oznaka:</b> @Model.Oznaka</p>
                 </div>
                 <div class="card-footer">
                     <form asp-action="DeleteConfirmed" asp-route-id="@Model.Id" method="post">
